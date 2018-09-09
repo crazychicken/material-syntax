@@ -70,12 +70,13 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
 
   &.syntax--other.syntax--inherited-class {
-    color: @green;
+    // Es6 React.Component
+    color: @green; // default
   }
 }
 
 .syntax--keyword {
-  color: @purple;
+  color: @purple; // default
 
   &.syntax--control {
     color: @red;
@@ -89,12 +90,14 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @purple;
 
     .syntax--keyword {
-      color: @cyan;
+      color: @cyan; // default
     }
   }
 
   &.syntax--operator {
-    color: @cyan;
+    // color: @cyan;
+    // Edit + - * :
+    color: @very-light-gray;
   }
 
   &.syntax--other.syntax--special-method {
@@ -102,11 +105,13 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
 
   &.syntax--other.syntax--unit {
-    color: @light-orange;
+    // rem, px ..
+    color: @red;
   }
 }
 
 .syntax--storage {
+  // extends Es6 React
   color: @purple;
 
   &.syntax--modifier.syntax--php {
@@ -122,7 +127,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
 
   &.syntax--numeric {
-    color: @light-orange;
+    // Number 1,2,3
+    color: @purple-num;
   }
 
   &.syntax--other.syntax--color {
@@ -135,10 +141,13 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 }
 
 .syntax--type {
+  // class, const, function js Es6
   color: @purple;
 
   &.syntax--property-name {
-    color: @cyan;
+    // color: @cyan;
+    // property-name SCSS
+    color: @blue;
   }
 }
 
@@ -164,11 +173,13 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 }
 
 .syntax--string {
-  color: @green;
+  // color: @green;
+  // Edit attribute="edit_here"
+  color: @light-orange-string;
 
 
   &.syntax--regexp {
-    color: @cyan;
+    color: @cyan; // default
 
     .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
@@ -188,14 +199,19 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
     &.syntax--begin,
     &.syntax--end {
-      color: @cyan;
+      // color: @cyan;
+      // Edit </>
+      color: @very-light-gray;
     }
 
-    &.syntax--string,
+    &.syntax--string {
+      // "" ''
+      color: @light-orange-string;
+    }
+    &.syntax--array,
     &.syntax--variable,
-    &.syntax--parameters,
-    &.syntax--array {
-      color: @cyan;
+    &.syntax--parameters {
+      color: @cyan; // $var
     }
 
     &.syntax--heading,
@@ -236,7 +252,9 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
 
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+    // color: @light-orange;
+    // class Name Es6 js
+    color: @green;
   }
 
   &.syntax--name.syntax--section {
@@ -248,21 +266,25 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @cyan;
+    // color: @cyan;
+    // attribute name in html
+    color: @green;
 
     &.syntax--class {
       color: @green;
     }
 
     &.syntax--id {
-      color: @orange;
+      // color: @orange;
+      // Id in Scss
+      color: @green;
     }
   }
 }
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: @light-orange; // default
   }
 
   &.syntax--link {
@@ -338,7 +360,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @green;
 
     .syntax--marker {
-      color: @cyan;
+      color: @cyan; // default
     }
   }
 }
