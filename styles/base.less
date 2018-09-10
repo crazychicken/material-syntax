@@ -97,7 +97,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   &.syntax--operator {
     // color: @cyan;
     // Edit + - * :
-    color: @very-light-gray;
+    color: @red-light;
   }
 
   &.syntax--other.syntax--special-method {
@@ -116,6 +116,18 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
   &.syntax--modifier.syntax--php {
     color: @very-light-gray;
+  }
+  // JS Es6
+  &.syntax--js {
+    &.syntax--const,
+    &.syntax--var,
+    &.syntax--function,
+    &.syntax--class {
+      color: @blue;
+    }
+    &.syntax--modifier {
+      color: @red;
+    }
   }
 }
 
@@ -137,6 +149,11 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
   &.syntax--other.syntax--symbol {
     color: @green;
+  }
+  &.syntax--js {
+    &.syntax--boolean {
+      color: @purple-num;
+    }
   }
 }
 
@@ -166,6 +183,9 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @light-orange;
   }
 }
+.syntax--important {
+  color: @red;
+}
 
 .syntax--invalid.syntax--illegal {
   background-color: @red;
@@ -176,6 +196,12 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   // color: @green;
   // Edit attribute="edit_here"
   color: @light-orange-string;
+
+  &.syntax--js {
+    &.syntax--quoted {
+      color: @light-orange-string;
+    }
+  }
 
 
   &.syntax--regexp {
@@ -241,7 +267,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @purple;
   }
 
-  &.syntax--function  {
+  &.syntax--function,
+  &.syntax--variable {
     color: @blue;
   }
 }
@@ -249,6 +276,9 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 .syntax--entity {
   &.syntax--name.syntax--function {
     color: @blue;
+    &.syntax--js {
+      color: @green;
+    }
   }
 
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
@@ -278,6 +308,9 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
       // color: @orange;
       // Id in Scss
       color: @green;
+    }
+    &.syntax--pseudo-element {
+      color: @red;
     }
   }
 }
