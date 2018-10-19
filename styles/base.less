@@ -150,10 +150,9 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   &.syntax--other.syntax--symbol {
     color: @green;
   }
+
   &.syntax--js {
-    &.syntax--boolean {
-      color: @purple-num;
-    }
+    color: @purple-num;
   }
 }
 
@@ -266,11 +265,15 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   &.syntax--class {
     color: @purple;
   }
+  &.syntax--js {
+    color: @blue;
+  }
 
   &.syntax--function,
   &.syntax--variable {
     color: @blue;
   }
+
 }
 
 .syntax--entity {
